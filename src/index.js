@@ -78,6 +78,23 @@ async function handleApi(request, env, url) {
   if (url.pathname === '/api/logout' && request.method === 'POST') {
     return json({ ok: true }, 200, { 'set-cookie': cookieHeader('', 0) });
   }
+    const authSession = await readSession(request, env.SESSION_SECRET);
+    if (url.pathname === '/api/favorites' && request.method === 'GET') {
+      if (!authSession) return json({ error: 'يجب تسجيل الدخول.' }, 401);
+      const rows = await env.DB.prepare('SELECT faq_id FROM favorites WHERE user_id = ? ORDER BY created_at DESC').bind(authSession.id).all();
+      return json({ favorites: rows.results.map((row) => row.faq_id) });
+    }
+    const favoriteMatch = url.pathname.match(/^\/api\/favorites\/([a-z-]+)$/);
+    if (favoriteMatch && ['POST', 'DELETE'].includes(request.method)) {
+      if (!authSession) return json({ error: 'يجب تسجيل الدخول.' }, 401);
+      const faqId = favoriteMatch[1];
+      if (request.method === 'POST') {
+        await env.DB.prepare('INSERT OR IGNORE INTO favorites (user_id, faq_id) VALUES (?, ?)').bind(authSession.id, faqId).run();
+      } else {
+        await env.DB.prepare('DELETE FROM favorites WHERE user_id = ? AND faq_id = ?').bind(authSession.id, faqId).run();
+      }
+      return json({ ok: true });
+    }
   if (!['/api/signup', '/api/login'].includes(url.pathname) || request.method !== 'POST') return json({ error: 'المسار غير موجود.' }, 404);
   let body;
   try { body = await request.json(); } catch { return json({ error: 'الطلب غير صالح.' }, 400); }

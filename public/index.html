@@ -25,6 +25,7 @@
         <button class="account-button" id="account-button" type="button">تسجيل الدخول</button>
         <div class="account-menu" id="account-menu" hidden>
           <span id="account-greeting"></span>
+          <button id="favorites-button" type="button">المفضلة</button>
           <button id="logout-button" type="button">تسجيل الخروج</button>
         </div>
       </div>
@@ -77,44 +78,55 @@
       </div>
 
       <div class="faq-list" id="faq-list">
-        <article class="faq-item" data-category="elections" data-search="متى ستجرى الانتخابات التشريعية المغرب 2026 الموعد الرسمي">
-          <button class="faq-question" aria-expanded="false">
-            <span class="faq-index">01</span><span class="question-text">متى ستجرى الانتخابات التشريعية في المغرب سنة 2026؟</span><span class="toggle" aria-hidden="true">+</span>
-          </button>
+        <article class="faq-item" data-id="election-date" data-category="elections" data-search="متى ستجرى الانتخابات التشريعية المغرب 2026 الموعد الرسمي">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-index">01</span><span class="question-text">متى ستجرى الانتخابات التشريعية في المغرب سنة 2026؟</span><span class="faq-actions"><button class="favorite-button" type="button" aria-label="حفظ السؤال">☆</button><span class="toggle" aria-hidden="true">+</span></span>
+          </div>
           <div class="faq-answer"><p>بحسب المعطيات المنشورة حاليًا، ستجرى الانتخابات التشريعية يوم <strong>الأربعاء 23 شتنبر 2026</strong>. يظل الإعلان الرسمي للسلطات المغربية ووزارة الداخلية هو المرجع النهائي في حال طرأ أي تغيير. <a class="answer-source" href="https://www.moroccoworldnews.com/2026/03/281668/morocco-sets-september-23-as-date-for-parliamentary-elections/" target="_blank" rel="noreferrer">المصدر الأول ↗</a> <a class="answer-source" href="https://apanews.net/moroccos-legislative-elections-set-for-september-23/" target="_blank" rel="noreferrer">المصدر الثاني ↗</a></p></div>
         </article>
-        <article class="faq-item" data-category="elections" data-search="ما هي الانتخابات التشريعية مجلس النواب المغرب">
-          <button class="faq-question" aria-expanded="false">
-            <span class="faq-index">02</span><span class="question-text">ما المقصود بالانتخابات التشريعية؟</span><span class="toggle" aria-hidden="true">+</span>
-          </button>
+        <article class="faq-item" data-id="legislative-election" data-category="elections" data-search="ما هي الانتخابات التشريعية مجلس النواب المغرب">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-index">02</span><span class="question-text">ما المقصود بالانتخابات التشريعية؟</span><span class="faq-actions"><button class="favorite-button" type="button" aria-label="حفظ السؤال">☆</button><span class="toggle" aria-hidden="true">+</span></span>
+          </div>
           <div class="faq-answer"><p>هي الانتخابات التي يختار فيها المواطنون ممثليهم في مجلس النواب. يشارك المجلس في سن القوانين ومراقبة عمل الحكومة، وفقًا للدستور والقوانين المنظمة.</p></div>
         </article>
-        <article class="faq-item" data-category="elections" data-search="من يحق له التصويت التسجيل اللوائح الانتخابية المغرب">
-          <button class="faq-question" aria-expanded="false">
-            <span class="faq-index">03</span><span class="question-text">من يحق له التصويت، وكيف أتحقق من تسجيلي؟</span><span class="toggle" aria-hidden="true">+</span>
-          </button>
+        <article class="faq-item" data-id="voting-rights" data-category="elections" data-search="من يحق له التصويت التسجيل اللوائح الانتخابية المغرب">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-index">03</span><span class="question-text">من يحق له التصويت، وكيف أتحقق من تسجيلي؟</span><span class="faq-actions"><button class="favorite-button" type="button" aria-label="حفظ السؤال">☆</button><span class="toggle" aria-hidden="true">+</span></span>
+          </div>
           <div class="faq-answer"><p>بصفة عامة، يحق للمواطنين المغاربة البالغين سن التصويت والمسجلين في اللوائح الانتخابية المشاركة. للتحقق من وضعيتك، استخدم القنوات الرسمية التي تعلنها وزارة الداخلية عند فتح الخدمة.</p></div>
         </article>
-        <article class="faq-item" data-category="institutions" data-search="ما دور الحكومة البرلمان الملك المؤسسات الدستورية">
-          <button class="faq-question" aria-expanded="false">
-            <span class="faq-index">04</span><span class="question-text">كيف تتوزع الأدوار بين الحكومة والبرلمان؟</span><span class="toggle" aria-hidden="true">+</span>
-          </button>
+        <article class="faq-item" data-id="government-parliament" data-category="institutions" data-search="ما دور الحكومة البرلمان الملك المؤسسات الدستورية">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-index">04</span><span class="question-text">كيف تتوزع الأدوار بين الحكومة والبرلمان؟</span><span class="faq-actions"><button class="favorite-button" type="button" aria-label="حفظ السؤال">☆</button><span class="toggle" aria-hidden="true">+</span></span>
+          </div>
           <div class="faq-answer"><p>تتولى الحكومة تنفيذ السياسات العمومية وتدبير الإدارة، بينما يشرّع البرلمان ويراقب العمل الحكومي ويقيّم السياسات العمومية. يحدد الدستور اختصاصات كل مؤسسة وعلاقتها بالأخرى.</p></div>
         </article>
-        <article class="faq-item" data-category="institutions" data-search="ما هو مجلس النواب مجلس المستشارين البرلمان المغربي">
-          <button class="faq-question" aria-expanded="false">
-            <span class="faq-index">05</span><span class="question-text">ما الفرق بين مجلس النواب ومجلس المستشارين؟</span><span class="toggle" aria-hidden="true">+</span>
-          </button>
+        <article class="faq-item" data-id="parliament-chambers" data-category="institutions" data-search="ما هو مجلس النواب مجلس المستشارين البرلمان المغربي">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-index">05</span><span class="question-text">ما الفرق بين مجلس النواب ومجلس المستشارين؟</span><span class="faq-actions"><button class="favorite-button" type="button" aria-label="حفظ السؤال">☆</button><span class="toggle" aria-hidden="true">+</span></span>
+          </div>
           <div class="faq-answer"><p>يشكل المجلسان البرلمان المغربي. ينتخب أعضاء مجلس النواب بالاقتراع المباشر، بينما يتكون مجلس المستشارين من ممثلين عن الجماعات الترابية والهيئات المهنية والمنظمات النقابية وفق القانون.</p></div>
         </article>
-        <article class="faq-item" data-category="participation" data-search="كيف أشارك السياسة المواطنة الشباب المغرب">
-          <button class="faq-question" aria-expanded="false">
-            <span class="faq-index">06</span><span class="question-text">كيف يمكنني المشاركة في الحياة السياسية؟</span><span class="toggle" aria-hidden="true">+</span>
-          </button>
+        <article class="faq-item" data-id="civic-participation" data-category="participation" data-search="كيف أشارك السياسة المواطنة الشباب المغرب">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-index">06</span><span class="question-text">كيف يمكنني المشاركة في الحياة السياسية؟</span><span class="faq-actions"><button class="favorite-button" type="button" aria-label="حفظ السؤال">☆</button><span class="toggle" aria-hidden="true">+</span></span>
+          </div>
           <div class="faq-answer"><p>تبدأ المشاركة بالاطلاع على البرامج من مصادر متعددة، والتسجيل والتصويت عند توفر الشروط، ثم الانخراط في جمعيات أو مبادرات مدنية، والمساهمة في النقاش العمومي باحترام ووعي.</p></div>
         </article>
       </div>
       <p class="empty-state" id="empty-state" hidden>لا توجد أسئلة تطابق بحثك. جرّب كلمة أخرى.</p>
+    </section>
+
+    <section class="quiz-section container" id="quiz">
+      <div class="section-label">02 / اختبر معلوماتك</div>
+      <div class="quiz-layout">
+        <div>
+          <h2>تعلّم بطريقة<br /><span>تفاعلية.</span></h2>
+          <p class="quiz-intro">ثلاثة أسئلة قصيرة لتثبيت أهم المفاهيم المدنية.</p>
+        </div>
+        <div class="quiz-panel" id="quiz-panel"></div>
+      </div>
     </section>
 
     <section class="resources-band" id="resources">

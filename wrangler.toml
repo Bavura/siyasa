@@ -1,0 +1,14 @@
+name = "siyasa"
+main = "src/index.js"
+compatibility_date = "2026-09-15"
+account_id = "436c43c2cf5c32a4bc49d4444190958c"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "siyasa-users"
+database_id = "31fba1d0-516f-4472-b1ab-bba6a86911e0"
+migrations_dir = "migrations"
